@@ -67,6 +67,7 @@ def train_and_evaluate(config_path):
 
     joblib.dump(lr, model_path)
 
+#########################################################
     scores_file = config["reports"]["scores"]
     params_file = config["reports"]["params"]
     with open(scores_file, "w") as f:
@@ -83,6 +84,7 @@ def train_and_evaluate(config_path):
             "l1_ratio": l1_ratio,
         }
         json.dump(params, f, indent=4)
+#########################################################
 
 
 
